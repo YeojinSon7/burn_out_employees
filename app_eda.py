@@ -102,7 +102,7 @@ def run_app_eda():
       ]
       cmap = mcl.LinearSegmentedColormap.from_list('my_cmap',colors,gamma=2)
       
-      fig = plt.figure() # figsize=(7,7)
+      fig = plt.figure() # figsize=(7,7) 이 코드 ()안에 안넣으면 크기가 위에 다른 그래프랑 똑같이 나옴
       fig.set_facecolor('white')
       
       h = plt.hist2d(
@@ -128,7 +128,7 @@ def run_app_eda():
         fmt = '.2f', linewidths=.5, cmap='Blues')
         st.pyplot(fig)
     if st.checkbox('선택 컬럼 상관관계 분석') == True:
-        column_list = st.multiselect('상관분석 하고싶은 컬럼을 선택하세요.', df.columns[:])
+        column_list = st.multiselect('상관분석 하고싶은 컬럼을 선택하세요.', df2.columns[:])
         if len(column_list) <= 1:
             st.warning('2개 이상 선택하세요')
         else:
