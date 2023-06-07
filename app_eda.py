@@ -110,6 +110,8 @@ def run_app_eda():
           bins=20, ## 빈 개수
           cmap=cmap, ## 컬러맵
       )
+      plt.xlabel(column)
+      plt.ylabel('Burn Rate')
       cur_ax = plt.gca() ## 현재 Axes
       fig.colorbar(h[3],ax=cur_ax) ## 컬러바 추가
       
