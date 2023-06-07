@@ -99,9 +99,9 @@ def run_app_ml():
     else:
         home = 1
 
-    Designation = st.number_input('직책 입력(0.0 ~ 5.0)',0.0,5.0)
-    time = st.number_input('근무시간 입력(1.0 ~ 10.0)',1.0,10.0)
-    mental = st.number_input('정신적 피로도 입력(0.0 ~ 10.0)',0.0,10.0)
+    Designation = st.number_input('직책 입력(0: 사원,대리/1: 과장/2: 차장/3: 부장/4: 이사,상무/5: 부사장)',0.0,5.0)
+    time = st.number_input('하루 근무시간 입력(1.0 ~ 10.0)',1.0,10.0)
+    mental = st.number_input('정신적 피로도 입력(0.0 ~ 10.0/0.0: 피로도가 전혀 없다/10.0: 피로도가 매우 높다)',0.0,10.0)
     month = [1,2,3,4,5,6,7,8,9,10,11,12]
     selected_month= st.selectbox('조직에 가입한 날짜(월)',month)
     day = st.number_input('조직한 가입한 날짜(일)',1,31)
