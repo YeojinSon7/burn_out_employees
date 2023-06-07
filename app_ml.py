@@ -52,6 +52,7 @@ def preprocess_inputs(df):
 def run_app_ml():
     df = pd.read_csv('data/train.csv')
     X_train, X_test, y_train, y_test = preprocess_inputs(df)
+    st.write('- 7개의 머신러닝 모델들의 검증 결과, 제일 정확도가 높은 모델인 :orange[Gradient Boosting]을 이용하겠습니다')
     if st.checkbox('인공지능 모델 선택과정 보기') == True:
         st.markdown('사용할 인공지능 모델')
         st.text('-  Linear Regression')
@@ -79,7 +80,6 @@ def run_app_ml():
 
         for name, model in models.items():
             st.text(name + " R^2 Score: {:.5f}".format(model.score(X_test, y_test)))
-        st.markdown('-  검증 척도가 제일 높은 :orange[Gradient Boosting]모델을 이용하겠습니다!')
     
     st.subheader('직원의 번아웃 비율 예측')
 
