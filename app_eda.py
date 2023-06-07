@@ -93,7 +93,7 @@ def run_app_eda():
       s_bins = st.number_input('빈의 갯수를 입력하세요.',10,50,20)
       h = 24
       s = 0.99
-      v = 8
+      v = 1
       
       colors = [
           mcl.hsv_to_rgb((h/360,0,v)),
@@ -102,7 +102,7 @@ def run_app_eda():
       ]
       cmap = mcl.LinearSegmentedColormap.from_list('my_cmap',colors,gamma=2)
       
-      fig = plt.figure(figsize=(7,7))
+      fig = plt.figure() # figsize=(7,7)
       fig.set_facecolor('white')
       
       h = plt.hist2d(
