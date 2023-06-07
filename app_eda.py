@@ -125,7 +125,7 @@ def run_app_eda():
         st.dataframe(df2.corr())
         fig = plt.figure()
         sns.heatmap(data = df2.corr(), annot=True, 
-        fmt = '.2f', linewidths=.5, cmap='Blues')
+        fmt = '.2f', linewidths=.5,vmin = -1, vmax = 1,cmap='coolwarm')
         st.pyplot(fig)
     if st.checkbox('선택 컬럼 상관관계 분석') == True:
         column_list = st.multiselect('상관분석 하고싶은 컬럼을 선택하세요.', df2.columns[:])
