@@ -91,7 +91,7 @@ def run_app_eda():
       st.pyplot(fig)
     else:
       s_bins = st.number_input('빈의 갯수를 입력하세요.',10,50,20)
-      h = 24
+      h = 6
       s = 0.99
       v = 1
       
