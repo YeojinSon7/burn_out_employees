@@ -50,7 +50,7 @@ def preprocess_inputs(df):
 
 
 def run_app_ml():
-    df = pd.read_csv('data\train.csv')
+    df = pd.read_csv('data/train.csv')
     X_train, X_test, y_train, y_test = preprocess_inputs(df)
     if st.checkbox('인공지능 모델 선택과정 보기') == True:
         st.markdown('사용할 인공지능 모델')

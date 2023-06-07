@@ -3,7 +3,7 @@ import pandas as pd
 
 
 def run_app_home():
-    df = pd.read_csv('data\train.csv')
+    df = pd.read_csv('data/train.csv')
     df1= pd.DataFrame({
     'columns':['Employee ID', 'Date of Joining', 'Gender', 'Company Type',
        'WFH Setup Available', 'Designation', 'Resource Allocation',
