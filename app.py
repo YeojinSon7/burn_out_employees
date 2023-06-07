@@ -6,8 +6,6 @@ from app_ml import run_app_ml
 from streamlit_option_menu import option_menu
 
 
-
-
 def main() :
     st.subheader('꿩먹고 알먹고?')
     st.title('정신건강 얻고 효율 얻고!')
