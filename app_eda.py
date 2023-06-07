@@ -81,7 +81,7 @@ def run_app_eda():
     df3= preprocess_inputs(df)
     st.subheader('컬럼 별 산점도)')
 
-    column = st.selectbox('산점도를 확인할 컬럼을 선택하세요.',df3.columns[5:8])
+    column = st.selectbox('산점도를 확인할 컬럼을 선택하세요.',df3.columns[3:6])
     if column == 'Mental Fatigue Score':
       fig = plt.figure()
       plt.scatter(df[column],df['Burn Rate'])
