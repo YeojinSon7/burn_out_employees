@@ -5,6 +5,7 @@ import seaborn as sns
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+import matplotlib.colors as mcl
 
 def preprocess_inputs(df):
   df = df.copy()
@@ -77,16 +78,42 @@ def run_app_eda():
     plt.ylabel('Burn Rate')
     st.pyplot(fig)
 
-
+    df3= preprocess_inputs(df)
     st.subheader('컬럼 별 산점도)')
 
-    column = st.selectbox('산점도를 확인할 컬럼을 선택하세요.',df.columns[5:8])
-    fig = plt.figure()
-    plt.scatter(df[column],df['Burn Rate'])
-    plt.title(column + " Scatter")
-    plt.xlabel(column)
-    plt.ylabel('Burn Rate')
-    st.pyplot(fig)
+    column = st.selectbox('산점도를 확인할 컬럼을 선택하세요.',df3.columns[5:8])
+    if column == 'Mental Fatigue Score':
+      fig = plt.figure()
+      plt.scatter(df[column],df['Burn Rate'])
+      plt.title(column + " Scatter")
+      plt.xlabel(column)
+      plt.ylabel('Burn Rate')
+      st.pyplot(fig)
+    else:
+      h = 24
+      s = 0.99
+      v = 1
+      
+      colors = [
+          mcl.hsv_to_rgb((h/360,0,v)),
+          mcl.hsv_to_rgb((h/360,0.9,v)),
+          mcl.hsv_to_rgb((h/360,1,v))
+      ]
+      cmap = mcl.LinearSegmentedColormap.from_list('my_cmap',colors,gamma=2)
+      
+      fig = plt.figure(figsize=(7,7))
+      fig.set_facecolor('white')
+      
+      h = plt.hist2d(
+          x=df3[column], ## x축 데이터
+          y=df3['Burn Rate'], ## y축 데이터
+          bins=50, ## 빈 개수
+          cmap=cmap, ## 컬러맵
+      )
+      cur_ax = plt.gca() ## 현재 Axes
+      fig.colorbar(h[3],ax=cur_ax) ## 컬러바 추가
+      
+      st.pyplot(fig)
 
     st.subheader('상관 관계 분석)')
 
