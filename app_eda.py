@@ -107,7 +107,7 @@ def run_app_eda():
       h = plt.hist2d(
           x=df3[column], ## x축 데이터
           y=df3['Burn Rate'], ## y축 데이터
-          bins=50, ## 빈 개수
+          bins=20, ## 빈 개수
           cmap=cmap, ## 컬러맵
       )
       cur_ax = plt.gca() ## 현재 Axes
