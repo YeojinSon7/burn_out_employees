@@ -36,7 +36,7 @@ def preprocess_inputs(df):
 
 def run_app_eda():
     st.subheader('데이터 분석')
-    df = pd.read_csv('C:/Users/405/Documents\GitHub/burn_out_employees/train.csv')
+    df = pd.read_csv('data\train.csv')
     st.subheader('기본 통계 데이터)')
     st.dataframe(df.describe())
 
