@@ -21,6 +21,10 @@ def run_app_home():
         original_title = '<p style="text-align: center; color: grey; font-size : 18px;">직원들의 번아웃 데이터</p>'
         st.markdown(original_title, unsafe_allow_html=True)
         st.dataframe(df)
+        st.write('-데이터 크기)')
+        st.write(df.shape)
+        link='-데이터 출처: [link](https://www.kaggle.com/datasets/blurredmachine/are-your-employees-burning-out)'
+        st.markdown(link,unsafe_allow_html=True)
 
     if st.button('데이터 설명') : # 버튼을 누르면 True다
         st.table(df1)
