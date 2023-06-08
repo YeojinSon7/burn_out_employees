@@ -111,7 +111,7 @@ def run_app_eda():
           bins=s_bins, ## 빈 개수
           cmap=cmap, ## 컬러맵
       )
-      plt.title(column +"2D-histogram")
+      plt.title(column +" 2D-histogram")
       plt.xlabel(column)
       plt.ylabel('Burn Rate')
       cur_ax = plt.gca() ## 현재 Axes
