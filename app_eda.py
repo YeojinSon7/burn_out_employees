@@ -79,9 +79,9 @@ def run_app_eda():
     st.pyplot(fig)
 
     df3= preprocess_inputs(df)
-    st.subheader('컬럼 별 산점도)')
+    st.subheader('컬럼 별 2차원 히스토그램과 산점도)')
 
-    column = st.selectbox('산점도를 확인할 컬럼을 선택하세요.',df3.columns[3:6])
+    column = st.selectbox('확인할 컬럼을 선택하세요.',df3.columns[3:6])
     if column == 'Mental Fatigue Score':
       fig = plt.figure()
       plt.scatter(df[column],df['Burn Rate'])
@@ -111,6 +111,7 @@ def run_app_eda():
           bins=s_bins, ## 빈 개수
           cmap=cmap, ## 컬러맵
       )
+      plt.title(column +"2D-histogram")
       plt.xlabel(column)
       plt.ylabel('Burn Rate')
       cur_ax = plt.gca() ## 현재 Axes
