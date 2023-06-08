@@ -1,5 +1,6 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=burn_out_employees&fontSize=50" />
-앱 대시보드: http://43.200.244.94:8502/
+- 앱 대시보드: http://43.200.244.94:8502/
+
 1. 앱 설명
 - 이 앱은 직원들의 번아웃 데이터를 이용하여 번아웃이 오는 주 원인을 분석하고 직원 정보를 입력하면 그 직원의 번아웃 비율을 예측해줍니다.
 
