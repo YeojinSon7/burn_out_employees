@@ -5,28 +5,7 @@
 2.사용한 데이터
 ![직원번아웃](https://github.com/YeojinSon7/burn_out_employees/assets/130967465/09b03dba-a1ca-41e9-9c2e-91955706ce1b)
 - 출처: https://www.kaggle.com/datasets/blurredmachine/are-your-employees-burning-out
-3. 데이터 분석
--  데이터의 크기) (22750,9)
--  분석결과 시각화)
-- 지역별 식당수>
-- 음식종류별 식당수>
-- 가격별 식당수>
-- 가격이 최대/최소 식당정보>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4. 사용한 기술
+3. 사용한 기술
 
  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"/><img src="https://img.shields.io/badge/Numpy-013243?style=flat&logo=numpy&logoColor=white"/> <img src="https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white"/>
  
@@ -34,7 +13,7 @@
  
  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white"/> <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white"/>
  
- 5. 사용한 머신러닝 모델
+ 4. 사용한 머신러닝 모델
  - Linear Regression: LinearRegression()
  - Linear Regression (L2 Regularization): Ridge()
  - Linear Regression (L1 Regularization): Lasso()
@@ -42,7 +21,7 @@
  - Decision Tree: DecisionTreeRegressor()
  - Random Forest: RandomForestRegressor()
  - Gradient Boosting: GradientBoostingRegressor()
-6. 각 모델별 정확도
+5. 각 모델별 정확도
 - Linear Regression R^2 Score: 0.87075
 - Linear Regression (L2 Regularization) R^2 Score: 0.87075
 - Linear Regression (L1 Regularization) R^2 Score: -0.00001
@@ -51,6 +30,6 @@
 - Random Forest R^2 Score: 0.89806
 - Gradient Boosting R^2 Score: 0.90257
 --> 정확도가 가장 높은 Gradient Boosting 모델 이용
-7. 사용한 이미지
+6. 사용한 이미지
 - 출처: https://greatplacetowork.me/wp-content/uploads/2022/09/mental-employe-mindset-health-progress-UAE-e1662518588611.jpg
 
